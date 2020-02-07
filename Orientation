@@ -1,0 +1,18 @@
+animationorient = 
+ With[{n = 100},   
+  Table[Graphics[{CapForm["Round"], Thickness[.003], 
+        Table[{Hue[Mod[2 \[Theta] + t^2, 4 \[Pi]]/(2 \[Pi])], 
+               Line[{#, #} + RotationTransform[
+               3/2 \[Theta] + t][.4 {-#, #}]] &[{Cos[\[Theta]], 
+               Cos[\[Theta]]}]}, {\[Theta], 0, 2 \[Pi] - 2 \[Pi]/n, 
+               2 \[Pi]/n}]},
+               PlotRange -> 2, ImageSize -> 540, 
+               Background -> Black,
+                      
+               Epilog -> {Text[
+               Style["@nathanaelnoir", 12, White, 
+               FontFamily -> "Helvetica"], {1.5, -1.8}]}
+              ],
+              {t, -\[Pi]/4, 2 \[Pi] - \[Pi]/4, 0.1}]
+         ];
+Export["anim.gif", animationorient, ImageResolution -> 300]
