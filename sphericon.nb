@@ -1,0 +1,24 @@
+CoolColor[ z_ ] := RGBColor[z, 1 - z, 1];
+sphcone = 
+ Table[Graphics3D[{Glow[Blue], Specularity[10, 20], 
+    GraphicsComplex[
+     Join[{Cos[#], Sin[#], 0} & /@ 
+       Range[0, Pi, Pi/(25)], {{0, 0, 
+        1}}], {{#, 
+         Rotate[Rotate[#, 180 \[Degree], {0, 0, 1}], 
+          90 \[Degree], {0, 1, 0}]} &[
+       GeometricTransformation[
+        Polygon[{##, 27} & @@@ 
+          Partition[Range[26], 2, 1]], {IdentityMatrix[3], 
+         ScalingTransform[{1, 1, -1}]}]]}]},
+   Background -> Black,
+   PlotRange -> All,
+   SphericalRegion -> True,
+   Boxed -> False, Lighting -> "Automatic",
+   Epilog -> {Text[
+      Style["@nathanaelnoir", 9, White, 
+       FontFamily -> "Helvetica"], {0.8, 0.055}]},
+   ViewVector -> {5 Cos[t], -5 Sin[t], 10 Sin[t/2]}], {t, 0, 4 Pi, 
+   0.3}]
+ 
+Export["alm.gif", sphcone, ImageResolution -> 200]
