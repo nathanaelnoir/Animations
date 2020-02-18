@@ -1,12 +1,11 @@
 CoolColor[ z_ ] := RGBColor[z, 1 - z, 1];
 foolio = Table[
-   ParametricPlot3D[{(Sin[u]*Sin[2*v]/2), (Sin[2*u]*Cos[v]*
-       Cos[v]), (Cos[2*u]*Cos[v]*Cos[v])}, {u, 0, Pi}, {v, 0, Pi}, 
-    SphericalRegion -> True,
-    Axes -> False, Boxed -> False, Background -> Black, 
-    ColorFunction -> CoolColor, Lighting -> "Ambient", 
-    MeshStyle -> Blue,
-    ViewVector -> {5 Cos[t], 5 Sin[t], 10 Sin[t/2]}], {t, 0, 4 Pi, 
-    0.3}];
+  ParametricPlot3D[{(Sin[u]*Sin[2*v]/2), (Sin[2*u]*Cos[v]*
+      Cos[v]), (Cos[2*u]*Cos[v]*Cos[v])}, {u, 0, Pi}, {v, 0, Pi}, 
+   SphericalRegion -> True,
+   Axes -> False, Boxed -> False, Background -> Black, 
+   ColorFunction -> CoolColor, Lighting -> "Ambient", 
+   MeshStyle -> Black,
+   ViewVector -> {5 Cos[t], 5 Sin[t], 10 Sin[t/2]}], {t, 0, 4 Pi, 0.3}]
 
 Export["animi.gif", foolio, ImageResolution -> 200]
