@@ -1,0 +1,16 @@
+f[n_, x_] := Abs[((1/Pi)^(1/4) HermiteH[n, x])/(E^(x^2/2) Sqrt[2^n n!])]^2
+alo = Plot[
+  Evaluate@Append[Table[f[n, x] + n + 1/2, {n, 0, 5}], 
+    x^2/2], {x, -3.5, 3.5}, 
+  Filling -> Table[n -> n - 1/2, {n, 1, 6}],
+  ColorFunction -> Hue,
+  
+  Background -> Black,
+  PlotRange -> Automatic,
+  AxesLabel -> None,
+  Ticks -> None,
+  Epilog -> {Text[
+     Style["@nathanaelnoir", 9, White, 
+      FontFamily -> "Helvetica"], {2.9, -0.2}]}
+  ]
+Export["hh.jpg", alo, ImageResolution -> 800]
