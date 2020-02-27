@@ -1,0 +1,15 @@
+makedisks[n_, size_] := {Lighter[Magenta, 0.6], 
+   Table[If[
+     n == i, {}, {Opacity[.1], 
+      Table[Disk[{Cos[2*Pi*(i/12)], Sin[2*Pi*(i/12)]}, k/size], {k, 1,
+         20}]}], {i, 0, 11}]};
+crazyring = 
+ Table[Graphics[{{Black, AbsoluteThickness[3], 
+     Line[{{-0.07, 0}, {0.07, 0}}], Line[{{0, -0.07}, {0, 0.07}}]}, 
+    makedisks[k, 90]}, ImageSize -> 400, PlotRange -> 1.5, 
+   Background -> Lighter[Gray, 0.5], 
+   Epilog -> {Text[
+      Style["@nathanaelnoir", 11, Black, 
+       FontFamily -> "Helvetica"], {1.1, -1.35}]}], {k, 0, 12, 1}]
+Export["anim.gif", crazyring, ImageResolution -> 300, 
+ "AnimationRepetitions" -> \[Infinity]]
