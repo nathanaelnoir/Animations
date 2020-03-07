@@ -1,0 +1,13 @@
+hypo = Table[
+  ParametricPlot3D[
+   Evaluate[(RotationTransform[th, {0, 0, 1}].RotationTransform[
+        t1, {1, 1, 0}])@{1, 1, t}], {t, -2, 2}, {th, 0, 2 \[Pi]}, 
+   PlotRange -> 2.5, ImageSize -> 500, Boxed -> False, 
+   ColorFunction -> "Rainbow", 
+   Lighting -> {{"Ambient", Lighter[White, 2/3]}}, 
+   MeshStyle -> {{Thick, White}, {Thick, White}}, Mesh -> {5, 30}, 
+   Background -> Black, Axes -> False, 
+   Epilog -> {Text[
+      Style["@nathanaelnoir", 12, White, 
+       FontFamily -> "Helvetica"], {0.8, 0}]}], {t1, 0, Pi, .05}]
+Export["hypo.gif", hypo, ImageResolution -> 235]
