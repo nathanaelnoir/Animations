@@ -1,0 +1,22 @@
+
+pts = RandomPoint[Sphere[{0, 0, 0}], 80];
+
+Text["test", #] & /@ pts // 
+  Graphics3D[#, SphericalRegion -> True, Boxed -> False] &;
+r[angle_?NumericQ, pivot : {_, _}] := 
+  RotationTransform[angle Degree, pivot];
+Graphics3D[(Style[Text["test", #], FontSize -> 14 - 5*(#[[2]] + 1), 
+      FontColor -> Blend[{Black, White}, #[[2]]]] & /@ 
+    r[0, {{0, 0.2, 1}, {1, 0, 0}}] /@ pts), BoxRatios -> {1, 1, 1}, 
+  Boxed -> True, Axes -> True, AxesLabel -> {"x", "y", "z"}];
+
+stsf = Table[
+   Graphics3D[(Style[Text["Stay Safe!", #], 
+        FontSize -> 14 - 5*(#[[2]] + 1), 
+        FontColor -> Blend[{White, Black}, #[[2]]]] & /@ 
+      r[angle, {{0, 0, 1}, {0.2, -1, 0}}] /@ pts), 
+    BoxRatios -> {1, 1, 1}, SphericalRegion -> True, Boxed -> False, 
+    ViewPoint -> Front, Background -> Black], {angle, 0, 80}];
+(*180 Maximum! DONT go higher*)
+Export["stay.gif", stsf, 
+ ImageResolution -> 180, AnimationRepetitions -> Infinity]
