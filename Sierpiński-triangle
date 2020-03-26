@@ -1,0 +1,30 @@
+triangles[p_, n_, s_] := 
+  With[{triangle = 
+     Table[p + s {Sin[2 i Pi/3], Cos[2 i Pi/3]}, {i, 3}]}, 
+   Table[Polygon[
+     Table[With[{p1 = triangle[[i]], 
+        p2 = triangle[[If[i == 3, 1, i + 1]]]}, 
+       j p1/n + p2 (n - j)/n], {i, 3}]], {j, 0, n - 1}]];
+ps = {{{0, 0}, 1}};
+f[ps_] := 
+  Flatten[Map[
+    Table[{First[#] + (Last[#] {Sin[2 i Pi/3], Cos[2 i Pi/3]})/2, 
+       Last[#]/2}, {i, 3}] &, ps], 1];
+n = 15;
+n2 = 5;
+pslist = NestList[f, ps, n2];
+frame[t_] := (Module[{m = 1 + Floor[(t - 1)/n], k = Mod[t, n, 1]}, 
+   If[t > n2 n, m = (t - n2 n);
+    k = n;];
+   Graphics[{FaceForm[], 
+     Table[{EdgeForm[
+        Directive[If[j == m, Opacity[0.6], Opacity[0.5]], Hue[j/n2]]],
+        triangles[First[tr], n, Last[tr]][[;; 
+         If[j == m, k, -1]]]}, {j, If[t > n2 n, m, 1], 
+       If[t > n2 n, n2, m]}, {tr, pslist[[j]]}]}, Background -> Black,
+     ImageSize -> 300, 
+    Epilog -> {Text[
+       Style["@nathanaelnoir", 9, White, 
+        FontFamily -> "Helvetica"], {0.65, 0.95}]}]])
+tria = Table[frame[t], {t, 1, 80, 1}];
+Export["yeah.gif", tria, ImageResolution -> 800]
