@@ -1,0 +1,19 @@
+u = Table[
+   Graphics[
+    Prepend[Riffle[Point [#] & /@ #, 
+        Table[ColorData["Rainbow", c], {c, 0, 1, 1/Length[#]}]], 
+       PointSize[Medium]] & [
+     jj = Partition[
+       Flatten[Table[
+         If[x^2 + y^2 == 0, {}, {1/Sqrt[x^2 + y^2]^a*x, 
+           1/Sqrt[x^2 + y^2]^a*y}], {x, -8, 8, 1}, {y, -8, 8, 1}]], 
+       2]], ImageSize -> {450, 450}, Background -> Black, 
+    Epilog -> {Text[
+       Style["@nathanaelnoir", 11, White, 
+        FontFamily -> "Helvetica"], {-11, 1.95}]}],
+   {a, -4, 4, 3}, {{color, "Rainbow"}}];
+gnome = u /. {h_, t_} :> t
+ahh = DeleteCases[u, All];
+Export["ajaj.gif", gnome, AnimationRepetitions -> \[Infinity], 
+ ImageResolution -> 8]
+
