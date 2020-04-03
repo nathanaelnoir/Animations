@@ -1,0 +1,18 @@
+f[x_] := Sin[x]
+ts[x_, a_, nmax_] := 
+ Sum[(Derivative[n][f][a]/n!)*(x - a)^n, {n, 0, nmax}]
+gif = Table[
+   Plot[{f[x], ts[x, 0, nmax]}, {x, -2*Pi, 2*Pi}, 
+    PlotRange -> {-1.45, 1.45}, 
+    Ticks -> {{-2 Pi, -Pi, Pi, 2 Pi, 3 Pi}, {-1, 1}}, 
+    PlotStyle -> {{Thick, Green}, {Thick, Dashed, 
+       Hue[0 + (nmax)/90]}}, AxesStyle -> GrayLevel[0.9], 
+    Background -> Black, 
+    Epilog -> {Text[
+       Style["@nathanaelnoir", 8, White, 
+        FontFamily -> "Helvetica"], {5, -1.3}]}], {nmax, 1, 19, 1}];
+Export["gif.gif", gif, ImageResolution -> 400, 
+ "DisplayDurations" -> 0.5]
+(*Export["gif.gif",
+ Flatten[{gif,Table[gif[[i]],{i,Length[gif]-1,2,-1}]}],
+ ImageResolution\[Rule]500]
