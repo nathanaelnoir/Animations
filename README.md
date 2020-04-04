@@ -44,7 +44,7 @@ Reach out to me at one of the following places!
 
 - If you like my work you can support me by buying me a coffee.
 
-[![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://www.buymeacoffee.com/nathanaelnoir)
+[![Support](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://www.buymeacoffee.com/nathanaelnoir)
 
 
 ---
