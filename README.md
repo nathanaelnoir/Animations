@@ -22,12 +22,12 @@
 
 **Example 1**
 
-![ttystudio GIF](https://raw.githubusercontent.com/nathanaelnoir/Animations/master/Examples/gif.gif)
+![](https://raw.githubusercontent.com/nathanaelnoir/Animations/master/Examples/gif.gif)
 
 **Example 2**
 
 
-![Recordit GIF](https://raw.githubusercontent.com/nathanaelnoir/Animations/master/Examples/gif2.gif)
+![](https://raw.githubusercontent.com/nathanaelnoir/Animations/master/Examples/gif2.gif)
 
 
 ## Support
