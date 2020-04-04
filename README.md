@@ -1,16 +1,13 @@
-<a href="http://fvcproductions.com"><img src="https://avatars1.githubusercontent.com/u/4284691?v=3&s=200" title="FVCproductions" alt="FVCproductions"></a>
+<a href="https://twitter.com/nathanaelnoir"><img src="https://raw.githubusercontent.com/nathanaelnoir/Animations/master/6b6346318dde1667d14dce0ef2dde2ba-sticker.png" title="Twitter" alt="Twitter"></a>
 
-<!-- [![FVCproductions](https://raw.githubusercontent.com/nathanaelnoir/Animations/master/6b6346318dde1667d14dce0ef2dde2ba-sticker.png)](http://fvcproductions.com) -->
+
 
 ***INSERT GRAPHIC HERE (include hyperlink in image)***
 
-# Repository Title Goes Here
+# Animations & GIFs
 
-> Subtitle or Short Description Goes Here
+> Animations and GIFs made for my Twitter account.
 
-> ideally one sentence
-
-> include terms/tags that can be searched
 
 **Badges will go here**
 
