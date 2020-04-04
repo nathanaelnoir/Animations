@@ -1,6 +1,6 @@
 <a href="http://fvcproductions.com"><img src="https://avatars1.githubusercontent.com/u/4284691?v=3&s=200" title="FVCproductions" alt="FVCproductions"></a>
 
-<!-- [![FVCproductions](https://github.com/nathanaelnoir/Animations/blob/master/6b6346318dde1667d14dce0ef2dde2ba-sticker.png)](http://fvcproductions.com) -->
+<!-- [![FVCproductions](https://raw.githubusercontent.com/nathanaelnoir/Animations/master/6b6346318dde1667d14dce0ef2dde2ba-sticker.png)](http://fvcproductions.com) -->
 
 ***INSERT GRAPHIC HERE (include hyperlink in image)***
 
