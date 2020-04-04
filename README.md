@@ -44,7 +44,7 @@ Reach out to me at one of the following places!
 
 - If you like my work you can support me by buying me a coffee.
 
-[![Support](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://www.buymeacoffee.com/nathanaelnoir)
+<a href="https://www.buymeacoffee.com/nathanaelnoir" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 
 ---
@@ -54,4 +54,4 @@ Reach out to me at one of the following places!
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
-- Copyright 2020 ©.
+- Copyright 2020 ©
