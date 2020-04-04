@@ -27,13 +27,14 @@
 - Use <a href="http://recordit.co/" target="_blank">**Recordit**</a> to create quicks screencasts of your desktop and export them as `GIF`s.
 - For terminal sessions, there's <a href="https://github.com/chjj/ttystudio" target="_blank">**ttystudio**</a> which also supports exporting `GIF`s.
 
-**Recordit**
+**Example 1**
+
+![ttystudio GIF](https://raw.githubusercontent.com/nathanaelnoir/Animations/master/Examples/gif.gif)
+
+**Example 2**
+
 
 ![Recordit GIF](https://raw.githubusercontent.com/nathanaelnoir/Animations/master/Examples/gif2.gif)
-
-**ttystudio**
-
-![ttystudio GIF](https://raw.githubusercontent.com/chjj/ttystudio/master/img/example.gif)
 
 
 ## Support
@@ -50,7 +51,7 @@ Reach out to me at one of the following places!
 
 - You could include a <a href="https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png" target="_blank">Gratipay</a> link as well.
 
-[![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://gratipay.com/fvcproductions/)
+[![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://www.buymeacoffee.com/nathanaelnoir)
 
 
 ---
