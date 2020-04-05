@@ -1,0 +1,366 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14074,        356]
+NotebookOptionsPosition[     13421,        336]
+NotebookOutlinePosition[     13758,        351]
+CellTagsIndexPosition[     13715,        348]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"ee", "[", "x_", "]"}], ":=", 
+   RowBox[{"N", "[", 
+    RowBox[{"Abs", "[", 
+     RowBox[{"Sin", "[", "x", "]"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Show", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"VectorPlot", "[", 
+       RowBox[{
+        RowBox[{"field", "@@", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", "y"}], "}"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", 
+          RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"y", ",", 
+          RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
+        RowBox[{"VectorScale", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"Small", ",", "Small", ",", "Automatic"}], "}"}]}], ",", 
+        RowBox[{"VectorStyle", "\[Rule]", 
+         RowBox[{"Hue", "[", "0.3", "]"}]}], ",", 
+        RowBox[{"Axes", "\[Rule]", "True"}], ",", 
+        RowBox[{"AxesStyle", "\[Rule]", 
+         RowBox[{"Arrowheads", "[", 
+          RowBox[{"{", 
+           RowBox[{"0.0", ",", "0.05"}], "}"}], "]"}]}], ",", 
+        RowBox[{"Frame", "\[Rule]", "False"}], ",", 
+        RowBox[{"Background", "\[Rule]", "Black"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"ParametricPlot", "[", 
+       RowBox[{
+        RowBox[{"param", "[", "t", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"t", ",", 
+          RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
+        RowBox[{"PlotStyle", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Thickness", "[", ".005", "]"}], ",", "Red"}], "}"}]}]}], 
+       "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Graphics", "[", "\[IndentingNewLine]", 
+       RowBox[{"Dynamic", "[", 
+        RowBox[{"{", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"pointVector", "=", 
+            RowBox[{"param", "[", "tpoint", "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"fieldVector", "=", 
+            RowBox[{"field", "@@", 
+             RowBox[{"param", "[", "tpoint", "]"}]}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"gradVector", "  ", "=", 
+            RowBox[{"grad", "[", "tpoint", "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"vAngle", "=", 
+            RowBox[{"VectorAngle", "[", 
+             RowBox[{"gradVector", ",", "fieldVector"}], "]"}]}], ";", 
+           "\[IndentingNewLine]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"Blue", ",", 
+             RowBox[{"Arrow", "[", 
+              RowBox[{"{", 
+               RowBox[{"pointVector", ",", 
+                RowBox[{"pointVector", "+", "fieldVector"}]}], "}"}], "]"}]}],
+             "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"Red", ",", 
+            RowBox[{"Arrow", "[", 
+             RowBox[{"{", 
+              RowBox[{"pointVector", ",", 
+               RowBox[{"pointVector", "+", "gradVector"}]}], "}"}], "]"}]}], 
+           "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"Green", ",", 
+            RowBox[{"Arrow", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"pointVector", "+", "#"}], "&"}], "/@", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "0"}], "}"}], ",", 
+                RowBox[{
+                 RowBox[{"Norm", "[", "fieldVector", "]"}], "*", 
+                 RowBox[{"Cos", "[", "vAngle", "]"}], "*", "gradVector"}]}], 
+               "}"}]}], "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"PointSize", "[", "Large", "]"}], ",", 
+            RowBox[{"Point", "[", "pointVector", "]"}]}], "}"}], ","}], 
+         "\[IndentingNewLine]", "}"}], "]"}], "\[IndentingNewLine]", "]"}]}], 
+     "\[IndentingNewLine]", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"tpoint", ",", "0", ",", "\"\<parameter\>\""}], "}"}], ",", 
+      "0", ",", 
+      RowBox[{"4", "\[Pi]"}], ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"field", ",", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"#1", ",", "#2"}], "}"}], "&"}], ",", "\"\<field\>\""}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"#1", ",", "#2"}], "}"}], "&"}], "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", "y"}], "}"}]}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"#1", "^", "2"}], ",", 
+            RowBox[{"#2", "^", "2"}]}], "}"}], "&"}], "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"x", "^", "2"}], ",", 
+           RowBox[{"y", "^", "2"}]}], "}"}]}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"#2", "^", "2"}], ",", 
+            RowBox[{"#1", "^", "2"}]}], "}"}], "&"}], "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"y", "^", "2"}], ",", 
+           RowBox[{"x", "^", "2"}]}], "}"}]}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"1", ",", 
+            RowBox[{"#1", "+", "#2"}]}], "}"}], "&"}], "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", 
+           RowBox[{"x", "+", "y"}]}], "}"}]}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "#2"}], ",", "#1"}], "}"}], "&"}], "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "y"}], ",", "x"}], "}"}]}]}], "}"}], ",", 
+      "PopupMenu"}], "}"}], ",", 
+    RowBox[{"Initialization", "\[RuleDelayed]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"param", "[", "t_", "]"}], ":=", 
+        RowBox[{"2", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Cos", "[", 
+             RowBox[{"4", "t"}], "]"}], 
+            RowBox[{"Cos", "[", "t", "]"}]}], ",", 
+           RowBox[{
+            RowBox[{"Cos", "[", 
+             RowBox[{"4", "t"}], "]"}], 
+            RowBox[{"Sin", "[", "t", "]"}]}]}], "}"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"grad", "[", "t_", "]"}], "=", 
+        RowBox[{"Evaluate", "[", 
+         RowBox[{"Normalize", "[", 
+          RowBox[{"D", "[", 
+           RowBox[{
+            RowBox[{"param", "[", "t", "]"}], ",", "t"}], "]"}], "]"}], 
+         "]"}]}]}], ")"}]}], ",", 
+    RowBox[{"TrackedSymbols", "\[Rule]", "All"}]}], "\[IndentingNewLine]", 
+   "]"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.79510379132834*^9, 3.795103815427661*^9}, {
+  3.7951039439831123`*^9, 3.795103995280181*^9}, {3.795104029115037*^9, 
+  3.795104051800403*^9}, {3.795104085477353*^9, 3.795104134924839*^9}, {
+  3.7951042827091007`*^9, 3.795104457578355*^9}, {3.795104506056464*^9, 
+  3.795104820296554*^9}},
+ CellLabel->"In[61]:=",ExpressionUUID->"d7f3ed0d-6725-4b5e-b3fc-a01e63c48584"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`field$$ = {#, #2}& , $CellContext`tpoint$$ =
+     0, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`tpoint$$], 0, "parameter"}, 0, 4 Pi}, {{
+       Hold[$CellContext`field$$], {#, #2}& , 
+       "field"}, {({#, #2}& ) -> {$CellContext`x, $CellContext`y}, ({#^2, \
+#2^2}& ) -> {$CellContext`x^2, $CellContext`y^2}, ({#2^2, #^2}& ) -> \
+{$CellContext`y^2, $CellContext`x^2}, ({1, # + #2}& ) -> {
+        1, $CellContext`x + $CellContext`y}, ({-#2, #}& ) -> \
+{-$CellContext`y, $CellContext`x}}}}, Typeset`size$$ = {360., {178., 182.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`tpoint$770455$$ = 0, $CellContext`field$770456$$ = 
+    False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`field$$ = {#, #2}& , $CellContext`tpoint$$ = 
+        0}, "ControllerVariables" :> {
+        Hold[$CellContext`tpoint$$, $CellContext`tpoint$770455$$, 0], 
+        Hold[$CellContext`field$$, $CellContext`field$770456$$, False]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        VectorPlot[
+         Apply[$CellContext`field$$, {$CellContext`x, $CellContext`y}], \
+{$CellContext`x, -Pi, Pi}, {$CellContext`y, -Pi, Pi}, 
+         VectorScale -> {Small, Small, Automatic}, VectorStyle -> Hue[0.3], 
+         Axes -> True, AxesStyle -> Arrowheads[{0., 0.05}], Frame -> False, 
+         Background -> Black], 
+        ParametricPlot[
+         $CellContext`param[$CellContext`t], {$CellContext`t, -Pi, Pi}, 
+         PlotStyle -> {
+           Thickness[0.005], Red}], 
+        Graphics[
+         Dynamic[{$CellContext`pointVector = \
+$CellContext`param[$CellContext`tpoint$$]; $CellContext`fieldVector = 
+            Apply[$CellContext`field$$, 
+              $CellContext`param[$CellContext`tpoint$$]]; \
+$CellContext`gradVector = $CellContext`grad[$CellContext`tpoint$$]; \
+$CellContext`vAngle = 
+            VectorAngle[$CellContext`gradVector, $CellContext`fieldVector]; {
+            Blue, 
+             
+             Arrow[{$CellContext`pointVector, $CellContext`pointVector + \
+$CellContext`fieldVector}]}, {Red, 
+            
+            Arrow[{$CellContext`pointVector, $CellContext`pointVector + \
+$CellContext`gradVector}]}, {Green, 
+            Arrow[
+             
+             Map[$CellContext`pointVector + #& , {{0, 0}, 
+               Norm[$CellContext`fieldVector] 
+               Cos[$CellContext`vAngle] $CellContext`gradVector}]]}, {
+            PointSize[Large], 
+            Point[$CellContext`pointVector]}, Null}]]], 
+      "Specifications" :> {{{$CellContext`tpoint$$, 0, "parameter"}, 0, 4 Pi, 
+         Appearance -> 
+         "Labeled"}, {{$CellContext`field$$, {#, #2}& , 
+          "field"}, {({#, #2}& ) -> {$CellContext`x, $CellContext`y}, ({#^2, \
+#2^2}& ) -> {$CellContext`x^2, $CellContext`y^2}, ({#2^2, #^2}& ) -> \
+{$CellContext`y^2, $CellContext`x^2}, ({1, # + #2}& ) -> {
+           1, $CellContext`x + $CellContext`y}, ({-#2, #}& ) -> \
+{-$CellContext`y, $CellContext`x}}, ControlType -> PopupMenu}}, 
+      "Options" :> {TrackedSymbols -> All}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {238., 244.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>(($CellContext`param[
+         Pattern[$CellContext`t, 
+          Blank[]]] := 
+       2 {Cos[4 $CellContext`t] Cos[$CellContext`t], Cos[4 $CellContext`t] 
+          Sin[$CellContext`t]}; $CellContext`grad[
+         Pattern[$CellContext`t, 
+          Blank[]]] = Evaluate[
+         Normalize[
+          D[
+           $CellContext`param[$CellContext`t], $CellContext`t]]]); 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.795103724752214*^9, {3.795103792027298*^9, 3.795103816263872*^9}, {
+   3.795103956138525*^9, 3.795103996614846*^9}, {3.79510403521784*^9, 
+   3.795104052649992*^9}, 3.795104101990879*^9, 3.795104135652442*^9, {
+   3.795104287151183*^9, 3.795104382660096*^9}, {3.79510441563878*^9, 
+   3.795104458375577*^9}, 3.795104507103631*^9, {3.795104551237073*^9, 
+   3.795104602180367*^9}, {3.7951046679585323`*^9, 3.795104820543243*^9}},
+ CellLabel->"Out[62]=",ExpressionUUID->"e1423424-472e-4127-9929-a90912563256"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1", "-", 
+  FractionBox[
+   RowBox[{"Abs", "[", "t", "]"}], "\[Pi]"]}]], "Input",
+ CellChangeTimes->{3.7951045105107107`*^9},
+ CellLabel->"In[29]:=",ExpressionUUID->"2d732522-f95a-422e-959c-cae93100cc3f"],
+
+Cell[BoxData[
+ RowBox[{"1", "-", 
+  FractionBox[
+   RowBox[{"Abs", "[", "t", "]"}], "\[Pi]"]}]], "Output",
+ CellChangeTimes->{3.795104510575782*^9},
+ CellLabel->"Out[29]=",ExpressionUUID->"23b1d905-df66-404b-b70c-a377fb9c33df"]
+}, Open  ]]
+},
+WindowSize->{808, 594},
+WindowMargins->{{223, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 7344, 194, 640, "Input",ExpressionUUID->"d7f3ed0d-6725-4b5e-b3fc-a01e63c48584"],
+Cell[7927, 218, 4983, 98, 535, "Output",ExpressionUUID->"e1423424-472e-4127-9929-a90912563256"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12947, 321, 228, 5, 49, InheritFromParent,ExpressionUUID->"2d732522-f95a-422e-959c-cae93100cc3f"],
+Cell[13178, 328, 227, 5, 52, "Output",ExpressionUUID->"23b1d905-df66-404b-b70c-a377fb9c33df"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
