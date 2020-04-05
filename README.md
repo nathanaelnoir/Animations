@@ -1,4 +1,4 @@
-<a href="https://twitter.com/nathanaelnoir"><img src="https://raw.githubusercontent.com/nathanaelnoir/Animations/master/6b6346318dde1667d14dce0ef2dde2ba-sticker.png" title="Twitter" alt="Twitter"></a>
+<!---<a href="https://twitter.com/nathanaelnoir"><img src="https://raw.githubusercontent.com/nathanaelnoir/Animations/master/6b6346318dde1667d14dce0ef2dde2ba-sticker.png" title="Twitter" alt="Twitter"></a>--->
 
 
 # Animations & GIFs
