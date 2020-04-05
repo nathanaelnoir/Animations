@@ -33,6 +33,8 @@ Reach out to me at one of the following places!
 
 
 - Twitter at <a href="http://twitter.com/nathanaelnoir" target="_blank">`@nathanaelnoir`</a>
+- Email (use Mathematica to encode): Uncompress@"1:eJxTTMoPChZnYGDISyzJSMxLTM3Jy88sckjPTczM0UvOzwUAoTAKyg=="
+
 
 
 ---
