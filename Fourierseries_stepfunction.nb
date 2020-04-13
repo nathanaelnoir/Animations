@@ -10,155 +10,159 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      7834,        204]
-NotebookOptionsPosition[      7440,        190]
-NotebookOutlinePosition[      7777,        205]
-CellTagsIndexPosition[      7734,        202]
+NotebookDataLength[      8187,        209]
+NotebookOptionsPosition[      7793,        195]
+NotebookOutlinePosition[      8130,        210]
+CellTagsIndexPosition[      8087,        207]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell[BoxData[{
+Cell[BoxData[
  RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"@", "nathanaelnoir"}], " ", "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
   RowBox[{
-   RowBox[{"f", "[", "t_", "]"}], ":=", 
-   RowBox[{"Piecewise", "[", 
-    RowBox[{"{", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"-", "2"}], ",", 
-        RowBox[{
-         RowBox[{"-", "\[Pi]"}], "<", "t", "<", 
-         RowBox[{
-          RowBox[{"-", "\[Pi]"}], "/", "2"}]}]}], "}"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"0", ",", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"-", "\[Pi]"}], "/", "2"}], "\[LessEqual]", "t", "<", 
-         "0"}]}], "}"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"3", ",", 
-        RowBox[{"0", "\[LessEqual]", "t", "<", "\[Pi]"}]}], "}"}]}], "}"}], 
-    "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"plot1", "=", 
-   RowBox[{"Plot", "[", 
-    RowBox[{
-     RowBox[{"f", "[", "t", "]"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"t", ",", 
-       RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
-     RowBox[{"Exclusions", "\[Rule]", "None"}], ",", 
-     RowBox[{"Background", "\[Rule]", "Black"}], ",", 
-     RowBox[{"Epilog", "\[Rule]", 
-      RowBox[{"{", 
-       RowBox[{"Text", "[", 
-        RowBox[{
-         RowBox[{"Style", "[", 
-          RowBox[{"\"\<@nathanaelnoir\>\"", ",", "10", ",", 
-           RowBox[{"GrayLevel", "[", "0.9", "]"}], ",", 
-           RowBox[{"FontFamily", "\[Rule]", "\"\<Helvetica\>\""}]}], "]"}], 
-         ",", 
-         RowBox[{"{", 
-          RowBox[{"2.5", ",", 
-           RowBox[{"-", "2.6"}]}], "}"}]}], "]"}], "}"}]}], ",", " ", 
-     RowBox[{"PlotRange", "\[Rule]", 
-      RowBox[{"{", 
-       RowBox[{"Automatic", ",", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"-", "3"}], ",", "4"}], "}"}]}], "}"}]}], ",", 
-     RowBox[{"Ticks", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", " ", 
-     RowBox[{"PlotStyle", "\[Rule]", 
-      RowBox[{"RGBColor", "[", 
-       RowBox[{"0.23", ",", "0.79", ",", "0.88"}], "]"}]}], ",", 
-     RowBox[{"TicksStyle", "\[Rule]", 
-      RowBox[{"RGBColor", "[", 
-       RowBox[{"219", ",", "219", ",", "219"}], "]"}]}]}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"FourierTrigSeries", "[", 
    RowBox[{
-    RowBox[{"f", "[", "t", "]"}], ",", "t", ",", "n"}], "]"}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"Plot", "[", 
     RowBox[{
-     RowBox[{"Evaluate", "[", 
-      RowBox[{"FourierTrigSeries", "[", 
-       RowBox[{
-        RowBox[{"f", "[", "t", "]"}], ",", "t", ",", "3"}], "]"}], "]"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"t", ",", 
-       RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
-     RowBox[{"Ticks", "\[Rule]", 
+     RowBox[{"f", "[", "t_", "]"}], ":=", 
+     RowBox[{"Piecewise", "[", 
       RowBox[{"{", 
        RowBox[{
         RowBox[{"{", 
          RowBox[{
-          RowBox[{"-", "\[Pi]"}], ",", 
-          RowBox[{"-", 
-           RowBox[{"(", 
-            RowBox[{"\[Pi]", "/", "2"}], ")"}]}], ",", "0", ",", 
-          RowBox[{"\[Pi]", "/", "2"}], ",", "\[Pi]"}], "}"}], ",", 
+          RowBox[{"-", "2"}], ",", 
+          RowBox[{
+           RowBox[{"-", "\[Pi]"}], "<", "t", "<", 
+           RowBox[{
+            RowBox[{"-", "\[Pi]"}], "/", "2"}]}]}], "}"}], ",", 
         RowBox[{"{", 
-         RowBox[{
-          RowBox[{"-", "2"}], ",", "3"}], "}"}]}], "}"}]}], ",", 
-     RowBox[{"PlotStyle", "\[Rule]", 
-      RowBox[{"RGBColor", "[", 
-       RowBox[{"0.23", ",", "0.79", ",", "0.88"}], "]"}]}], ",", 
-     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}], ";"}], 
-  "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"seriesexp", " ", "=", " ", 
-   RowBox[{"Manipulate", "[", 
-    RowBox[{
-     RowBox[{"Show", "[", 
-      RowBox[{"plot1", ",", 
-       RowBox[{"Plot", "[", 
+         RowBox[{"0", ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "\[Pi]"}], "/", "2"}], "\[LessEqual]", "t", "<", 
+           "0"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"3", ",", 
+          RowBox[{"0", "\[LessEqual]", "t", "<", "\[Pi]"}]}], "}"}]}], "}"}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"plot1", "=", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"f", "[", "t", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", 
+         RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
+       RowBox[{"Exclusions", "\[Rule]", "None"}], ",", 
+       RowBox[{"Background", "\[Rule]", "Black"}], ",", 
+       RowBox[{"Epilog", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"Text", "[", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<@nathanaelnoir\>\"", ",", "10", ",", 
+             RowBox[{"GrayLevel", "[", "0.9", "]"}], ",", 
+             RowBox[{"FontFamily", "\[Rule]", "\"\<Helvetica\>\""}]}], "]"}], 
+           ",", 
+           RowBox[{"{", 
+            RowBox[{"2.5", ",", 
+             RowBox[{"-", "2.6"}]}], "}"}]}], "]"}], "}"}]}], ",", " ", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"Automatic", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "3"}], ",", "4"}], "}"}]}], "}"}]}], ",", 
+       RowBox[{"Ticks", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", " ", 
+       RowBox[{"PlotStyle", "\[Rule]", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{"0.23", ",", "0.79", ",", "0.88"}], "]"}]}], ",", 
+       RowBox[{"TicksStyle", "\[Rule]", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{"219", ",", "219", ",", "219"}], "]"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"FourierTrigSeries", "[", 
+     RowBox[{
+      RowBox[{"f", "[", "t", "]"}], ",", "t", ",", "n"}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Plot", "[", 
+     RowBox[{
+      RowBox[{"Evaluate", "[", 
+       RowBox[{"FourierTrigSeries", "[", 
         RowBox[{
-         RowBox[{"Evaluate", "[", 
-          RowBox[{"FourierTrigSeries", "[", 
-           RowBox[{
-            RowBox[{"f", "[", "t", "]"}], ",", "t", ",", "n"}], "]"}], "]"}], 
-         ",", 
+         RowBox[{"f", "[", "t", "]"}], ",", "t", ",", "3"}], "]"}], "]"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"t", ",", 
+        RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
+      RowBox[{"Ticks", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
          RowBox[{"{", 
-          RowBox[{"t", ",", 
-           RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
-         RowBox[{"Ticks", "\[Rule]", 
+          RowBox[{
+           RowBox[{"-", "\[Pi]"}], ",", 
+           RowBox[{"-", 
+            RowBox[{"(", 
+             RowBox[{"\[Pi]", "/", "2"}], ")"}]}], ",", "0", ",", 
+           RowBox[{"\[Pi]", "/", "2"}], ",", "\[Pi]"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "2"}], ",", "3"}], "}"}]}], "}"}]}], ",", 
+      RowBox[{"PlotStyle", "\[Rule]", 
+       RowBox[{"RGBColor", "[", 
+        RowBox[{"0.23", ",", "0.79", ",", "0.88"}], "]"}]}], ",", 
+      RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"seriesexp", " ", "=", " ", 
+    RowBox[{"Manipulate", "[", 
+     RowBox[{
+      RowBox[{"Show", "[", 
+       RowBox[{"plot1", ",", 
+        RowBox[{"Plot", "[", 
+         RowBox[{
+          RowBox[{"Evaluate", "[", 
+           RowBox[{"FourierTrigSeries", "[", 
+            RowBox[{
+             RowBox[{"f", "[", "t", "]"}], ",", "t", ",", "n"}], "]"}], "]"}],
+           ",", 
           RowBox[{"{", 
-           RowBox[{
-            RowBox[{"{", 
-             RowBox[{
-              RowBox[{"-", "\[Pi]"}], ",", 
-              RowBox[{"-", 
-               RowBox[{"(", 
-                RowBox[{"\[Pi]", "/", "2"}], ")"}]}], ",", "0", ",", 
-              RowBox[{"\[Pi]", "/", "2"}], ",", "\[Pi]"}], "}"}], ",", 
-            RowBox[{"{", 
-             RowBox[{
-              RowBox[{"-", "2"}], ",", "3"}], "}"}]}], "}"}]}], ",", 
-         RowBox[{"TicksStyle", "\[Rule]", 
-          RowBox[{"RGBColor", "[", 
-           RowBox[{"219", ",", "219", ",", "219"}], "]"}]}], ",", 
-         RowBox[{"PlotStyle", "\[Rule]", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"RGBColor", "[", 
-             RowBox[{"1.", ",", "0.91", ",", "0.31"}], "]"}], ",", "Thick"}], 
-           "}"}]}]}], "]"}]}], "]"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"n", ",", "1", ",", "23", ",", "2"}], "}"}]}], "]"}]}], 
-  "\[IndentingNewLine]", "\[IndentingNewLine]", 
-  RowBox[{"(*", 
-   RowBox[{"Export", "[", 
-    RowBox[{"\"\<gnoooo.gif\>\"", ",", "gnomi", ",", 
-     RowBox[{"ImageResolution", "\[Rule]", "300"}], ",", 
-     RowBox[{"\"\<DisplayDurations\>\"", "\[Rule]", "0.5"}]}], "]"}], "*)"}], 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+           RowBox[{"t", ",", 
+            RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
+          RowBox[{"Ticks", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "\[Pi]"}], ",", 
+               RowBox[{"-", 
+                RowBox[{"(", 
+                 RowBox[{"\[Pi]", "/", "2"}], ")"}]}], ",", "0", ",", 
+               RowBox[{"\[Pi]", "/", "2"}], ",", "\[Pi]"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "2"}], ",", "3"}], "}"}]}], "}"}]}], ",", 
+          RowBox[{"TicksStyle", "\[Rule]", 
+           RowBox[{"RGBColor", "[", 
+            RowBox[{"219", ",", "219", ",", "219"}], "]"}]}], ",", 
+          RowBox[{"PlotStyle", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"RGBColor", "[", 
+              RowBox[{"1.", ",", "0.91", ",", "0.31"}], "]"}], ",", "Thick"}],
+             "}"}]}]}], "]"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "23", ",", "2"}], "}"}]}], "]"}]}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Export", "[", 
+     RowBox[{"\"\<gnoooo.gif\>\"", ",", "gnomi", ",", 
+      RowBox[{"ImageResolution", "\[Rule]", "300"}], ",", 
+      RowBox[{"\"\<DisplayDurations\>\"", "\[Rule]", "0.5"}]}], "]"}], "*)"}],
+    "\[IndentingNewLine]", "\[IndentingNewLine]"}]}]], "Input",
  CellChangeTimes->{{3.7957792592037773`*^9, 3.795779353793462*^9}, {
    3.79577940645795*^9, 3.795779543877459*^9}, {3.795779644411036*^9, 
    3.795779717791503*^9}, {3.795779807799048*^9, 3.795779842757018*^9}, {
@@ -179,9 +183,10 @@ Cell[BoxData[{
    3.7957829822193336`*^9}, {3.7957830897702303`*^9, 
    3.7957830900470123`*^9}, {3.795784754774688*^9, 3.795784909945533*^9}, {
    3.795784955164296*^9, 3.7957850463807096`*^9}, {3.795785328954377*^9, 
-   3.795785329399043*^9}, {3.795793844379868*^9, 3.795793912809958*^9}},
- CellLabel->
-  "In[1635]:=",ExpressionUUID->"83811047-c0e0-4934-8ecf-66aa722ec865"],
+   3.795785329399043*^9}, {3.795793844379868*^9, 3.795793912809958*^9}, {
+   3.795793974512765*^9, 
+   3.795794031561865*^9}},ExpressionUUID->"83811047-c0e0-4934-8ecf-\
+66aa722ec865"],
 
 Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.79579385460032*^9, 
@@ -204,8 +209,8 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 6722, 163, 367, "Input",ExpressionUUID->"83811047-c0e0-4934-8ecf-66aa722ec865"],
-Cell[7283, 185, 153, 3, 30, InheritFromParent,ExpressionUUID->"64bac63c-734f-45b8-8324-0a41a03ac100"]
+Cell[558, 20, 7075, 168, 409, "Input",ExpressionUUID->"83811047-c0e0-4934-8ecf-66aa722ec865"],
+Cell[7636, 190, 153, 3, 30, InheritFromParent,ExpressionUUID->"64bac63c-734f-45b8-8324-0a41a03ac100"]
 }
 ]
 *)
