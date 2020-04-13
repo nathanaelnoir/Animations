@@ -1,0 +1,220 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8270,        212]
+NotebookOptionsPosition[      7852,        196]
+NotebookOutlinePosition[      8189,        211]
+CellTagsIndexPosition[      8146,        208]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"\n", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "[", "t_", "]"}], ":=", 
+     RowBox[{"Piecewise", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "2"}], ",", 
+          RowBox[{
+           RowBox[{"-", "\[Pi]"}], "<", "t", "<", 
+           RowBox[{
+            RowBox[{"-", "\[Pi]"}], "/", "2"}]}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "\[Pi]"}], "/", "2"}], "\[LessEqual]", "t", "<", 
+           "0"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"3", ",", 
+          RowBox[{"0", "\[LessEqual]", "t", "<", "\[Pi]"}]}], "}"}]}], "}"}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"plot1", "=", 
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"f", "[", "t", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", 
+         RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
+       RowBox[{"Exclusions", "\[Rule]", "None"}], ",", 
+       RowBox[{"Background", "\[Rule]", "Black"}], ",", 
+       RowBox[{"Epilog", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"Text", "[", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<@nathanaelnoir\>\"", ",", "10", ",", 
+             RowBox[{"GrayLevel", "[", "0.9", "]"}], ",", 
+             RowBox[{"FontFamily", "\[Rule]", "\"\<Helvetica\>\""}]}], "]"}], 
+           ",", 
+           RowBox[{"{", 
+            RowBox[{"2.5", ",", 
+             RowBox[{"-", "2.6"}]}], "}"}]}], "]"}], "}"}]}], ",", " ", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"Automatic", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "3"}], ",", "4"}], "}"}]}], "}"}]}], ",", 
+       RowBox[{"Ticks", "\[Rule]", "False"}], ",", "\[IndentingNewLine]", " ", 
+       RowBox[{"PlotStyle", "\[Rule]", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{"0.23", ",", "0.79", ",", "0.88"}], "]"}]}], ",", 
+       RowBox[{"TicksStyle", "\[Rule]", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{"219", ",", "219", ",", "219"}], "]"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"FourierTrigSeries", "[", 
+     RowBox[{
+      RowBox[{"f", "[", "t", "]"}], ",", "t", ",", "n"}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Plot", "[", 
+     RowBox[{
+      RowBox[{"Evaluate", "[", 
+       RowBox[{"FourierTrigSeries", "[", 
+        RowBox[{
+         RowBox[{"f", "[", "t", "]"}], ",", "t", ",", "3"}], "]"}], "]"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"t", ",", 
+        RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
+      RowBox[{"Ticks", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "\[Pi]"}], ",", 
+           RowBox[{"-", 
+            RowBox[{"(", 
+             RowBox[{"\[Pi]", "/", "2"}], ")"}]}], ",", "0", ",", 
+           RowBox[{"\[Pi]", "/", "2"}], ",", "\[Pi]"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "2"}], ",", "3"}], "}"}]}], "}"}]}], ",", 
+      RowBox[{"PlotStyle", "\[Rule]", 
+       RowBox[{"RGBColor", "[", 
+        RowBox[{"0.23", ",", "0.79", ",", "0.88"}], "]"}]}], ",", 
+      RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"gnomi", " ", "=", " ", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Show", "[", 
+        RowBox[{"plot1", ",", 
+         RowBox[{"Plot", "[", 
+          RowBox[{
+           RowBox[{"Evaluate", "[", 
+            RowBox[{"FourierTrigSeries", "[", 
+             RowBox[{
+              RowBox[{"f", "[", "t", "]"}], ",", "t", ",", "n"}], "]"}], 
+            "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"t", ",", 
+             RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
+           RowBox[{"Ticks", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "\[Pi]"}], ",", 
+                RowBox[{"-", 
+                 RowBox[{"(", 
+                  RowBox[{"\[Pi]", "/", "2"}], ")"}]}], ",", "0", ",", 
+                RowBox[{"\[Pi]", "/", "2"}], ",", "\[Pi]"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "2"}], ",", "3"}], "}"}]}], "}"}]}], ",", 
+           RowBox[{"TicksStyle", "\[Rule]", 
+            RowBox[{"RGBColor", "[", 
+             RowBox[{"219", ",", "219", ",", "219"}], "]"}]}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"RGBColor", "[", 
+               RowBox[{"1.", ",", "0.91", ",", "0.31"}], "]"}], ",", 
+              "Thick"}], "}"}]}]}], "]"}]}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"n", ",", "1", ",", "23", ",", "2"}], "}"}]}], "]"}]}], ";"}],
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"Export", "[", 
+    RowBox[{"\"\<gnoooo.gif\>\"", ",", "gnomi", ",", 
+     RowBox[{"ImageResolution", "\[Rule]", "300"}], ",", 
+     RowBox[{"\"\<DisplayDurations\>\"", "\[Rule]", "0.5"}]}], "]"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.7957792592037773`*^9, 3.795779353793462*^9}, {
+   3.79577940645795*^9, 3.795779543877459*^9}, {3.795779644411036*^9, 
+   3.795779717791503*^9}, {3.795779807799048*^9, 3.795779842757018*^9}, {
+   3.7957801428612967`*^9, 3.795780146505411*^9}, {3.795780552486051*^9, 
+   3.795780604154871*^9}, {3.795780707980866*^9, 3.795780709690373*^9}, {
+   3.7957807664851437`*^9, 3.795780832158201*^9}, {3.795780930085286*^9, 
+   3.795781028444669*^9}, {3.795781062123271*^9, 3.795781097346137*^9}, {
+   3.795781130676887*^9, 3.795781132906466*^9}, 3.7957811670117493`*^9, {
+   3.7957812495798283`*^9, 3.795781326239923*^9}, {3.795781362584538*^9, 
+   3.795781396790856*^9}, {3.795781428566399*^9, 3.79578148284907*^9}, {
+   3.795781515649753*^9, 3.795781588089343*^9}, {3.795781622251685*^9, 
+   3.795781629176193*^9}, {3.795781664389477*^9, 3.795781665029749*^9}, {
+   3.7957817411911173`*^9, 3.795781938455427*^9}, {3.795781968583269*^9, 
+   3.795781997837554*^9}, {3.795782032000739*^9, 3.7957821336007757`*^9}, {
+   3.795782421315352*^9, 3.795782441663378*^9}, {3.7957825204765587`*^9, 
+   3.795782524074382*^9}, {3.795782821238337*^9, 3.795782832977646*^9}, {
+   3.795782874329034*^9, 3.7957828995193157`*^9}, {3.7957829772305803`*^9, 
+   3.7957829822193336`*^9}, {3.7957830897702303`*^9, 
+   3.7957830900470123`*^9}, {3.795784754774688*^9, 3.795784909945533*^9}, {
+   3.795784955164296*^9, 3.7957850463807096`*^9}, {3.795785328954377*^9, 
+   3.795785329399043*^9}},
+ CellLabel->
+  "In[1619]:=",ExpressionUUID->"83811047-c0e0-4934-8ecf-66aa722ec865"],
+
+Cell[BoxData["\<\"gnoooo.gif\"\>"], "Output",
+ CellChangeTimes->{{3.795784786171589*^9, 3.7957849106291037`*^9}, {
+   3.7957849579971848`*^9, 3.795785012892543*^9}, 3.7957850483582897`*^9, 
+   3.795785154263435*^9, 3.795785351026869*^9},
+ CellLabel->
+  "Out[1624]=",ExpressionUUID->"64bac63c-734f-45b8-8324-0a41a03ac100"]
+}, Open  ]]
+},
+WindowSize->{1083, 638},
+WindowMargins->{{Automatic, 22}, {Automatic, 0}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 6932, 164, 409, "Input",ExpressionUUID->"83811047-c0e0-4934-8ecf-66aa722ec865"],
+Cell[7515, 188, 321, 5, 92, "Output",ExpressionUUID->"64bac63c-734f-45b8-8324-0a41a03ac100"]
+}, Open  ]]
+}
+]
+*)
+
