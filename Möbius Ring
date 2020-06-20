@@ -1,0 +1,16 @@
+crazyring = 
+  Table[Graphics[{EdgeForm[], 
+     With[{vv = 
+        Flatten[{Map[{0, 0} + # &, #], Map[{0, 1/6} + # 5/6 &, #]} &[
+          N[Table[{Sin[a], Cos[a]}, {a, 0, 2 Pi - 2 Pi/48, 
+             2 Pi/48}]]], 1]}, 
+      With[{cc = Hue /@ N[(Range[#]/#) &[Length[vv]]]}, 
+       Polygon[vv, VertexColors -> RotateLeft[cc, s]]]], White, 
+     Thickness[.02], Black, Disk[{0, 2/6}, 15/24]}, 
+    Background -> Black, 
+    Epilog -> {Text[
+       Style["@nathanaelnoir", 11, White, 
+        FontFamily -> "Helvetica"], {0.8, -1}]}, 
+    ImageSize -> 400], {s, 1, 68, 1}];
+Export["animo.gif", crazyring, ImageResolution -> 260, 
+ "AnimationRepetitions" -> \[Infinity]]
